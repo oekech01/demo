@@ -1,0 +1,123 @@
+<html>
+<head>
+	<style>
+		div {
+			text-align: center;
+			font-size: 20px;
+			color: #000000;
+		}
+
+		body {
+			background-color: #776672;
+		}
+	</style>
+<meta charset="utf-8">
+<title>Pick Numbers</title>
+</head>
+<body>
+	<div>
+	<form>
+		INPUT YOUR 5 NUMBERS HERE, SEPARATED BY SPACES </br>
+		<input type="text" id="firstNum"> </br>
+		INPUT YOUR YOUR LUCKY NUMBER HERE </br>
+		<input type="text" id="secondNum"> </br>
+		CLICK HERE TO SEE YOUR EARNINGS! </br>
+		<input type='button' onclick='pay()' value="Show the value"> </br>
+	</form>
+	</div>
+
+<script language="javascript">
+	function pay() {
+
+		var user_number = document.getElementById('firstNum').value;
+		var lucky_number = document.getElementById('secondNum').value;
+		var list = user_number.split(" ");
+		var nums = new Array();
+		var is_lucky = 0;
+		var my_lucky_num = 0;
+
+		for (var i = 1; i < 7; i++) {
+			if (i == 6) {
+				rand_num = Math.floor((Math.random() * 18) + 1);
+				my_lucky_num =  rand_num;
+				if (rand_num == lucky_number) {
+					is_lucky = 1;
+				}
+			}
+			else {
+				rand_num = Math.floor((Math.random() * 48) + 1);
+				nums.push(rand_num);
+			}
+		}
+		document.write("My randomly selected numbers are:  ");
+		for (i=0; i<nums.length; i++) {
+    		document.write(nums[i] + " ");
+  		}
+
+  		document.write("</br>");
+
+  		nums.sort(function(nums, b) {
+  		return nums-b
+  		})
+
+  		document.write("My randomly selected numbers in sorted form are:  ");
+  		for (i=0; i<nums.length; i++) {
+    		document.write(nums[i] + " ");
+  		}
+  		document.write("</br>");
+  		document.write("My lucky number is: " + my_lucky_num + "</br>");
+
+  		document.write("Your numbers are: ");
+  		for (i=0; i<list.length; i++) {
+    		document.write(list[i] + " ");
+  		}
+  		document.write("</br>");
+  		document.write("Your lucky number is: " + lucky_number + "</br>");
+
+  		var count = 0;
+  		for (var i = 0; i < nums.length; i++) {
+  			for (var j = 0; j < list.length; j++) {
+  				if (nums[i] == list[j]) {
+  					count++;                                                                                                                         
+  				}
+  			}
+  		}
+  		
+  		if (count == 0 && is_lucky == 1) {
+  			document.write("You win $4!");
+  		}
+  		else if (count == 1 && is_lucky == 1) {
+  			document.write("You win $6!");
+  		}
+  		else if (count == 2 && is_lucky == 0) {
+  			document.write("You win $3!");
+  		}
+  		else if (count == 2 && is_lucky == 1) {
+  			document.write("You win $25!");
+  		}
+  		else if (count == 3 && is_lucky == 0) {
+  			document.write("You win $20!");
+  		}
+  		else if (count == 3 && is_lucky == 1) {
+  			document.write("You win $150!");
+  		}
+  		else if (count == 4 && is_lucky == 0) {
+  			document.write("You win $200!");
+  		}
+  		else if (count == 4 && is_lucky == 1) {
+  			document.write("You win $5000!");
+  		}
+  		else if (count == 5 && is_lucky == 0) {
+  			document.write("You win $25000 every year for life!");
+  		}
+  		else if (count == 5 && is_lucky == 1) {
+  			document.write("You win $7000 every  year for life!");
+  		}
+  		else {
+  			document.write("Sorry, you don't win anything today, try again later!");
+  		}
+
+	}
+</script>
+</body>
+</html>
