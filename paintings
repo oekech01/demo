@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script>
+
+		let gallery = []; 
+		var picture1 = {
+			name : "Mona Lisa",
+			price :  200000,
+			//small_image = document.getElementById("myImg1").innerHTML;
+			// large_image = large_image;
+		};
+
+		var picture2 = {
+			name : "The Scream",
+			price :  175000,
+			//small_image = document.getElementById("myImg2").innerHTML;
+			// large_image = large_image;
+		};
+
+		var picture3 = {
+			name : "The Starry Night",
+			price :  43800,
+			//small_image = document.getElementById("myImg3").innerHTML;
+			// large_image = large_image;
+		};
+
+		var picture4 = {
+			name : "Arnolfini Potrait",
+			price :  5450,
+			//small_image = document.getElementById("myImg4").innerHTML;
+			// large_image = large_image;
+		};
+
+		var picture5 = {
+			name : "The Last Supper",
+			price :  60050,
+			//small_image = document.getElementById("myImg5").innerHTML;
+			// large_image = large_image;
+		};
+		gallery.push(picture1);
+		gallery.push(picture2);
+		gallery.push(picture3);
+		gallery.push(picture4);
+		gallery.push(picture5);
+
+
+		var first_div = document.createElement("div");
+		first_div.innerHTML = "name: " + gallery[0].name + "</br>" + "price: " + gallery[0].price;
+
+		var second_div = document.createElement("div");
+		first_div.innerHTML = "name: " + gallery[1].name + "</br>" + "price: " + gallery[1].price;
+
+		var third_div = document.createElement("div");
+		first_div.innerHTML = "name: " + gallery[2].name + "</br>" + "price: " + gallery[2].price;
+
+		var fourth_div = document.createElement("div");
+		first_div.innerHTML = "name: " + gallery[3].name + "</br>" + "price: " + gallery[3].price;
+
+		var fifth_div = document.createElement("div");
+		first_div.innerHTML = "name: " + gallery[4].name + "</br>" + "price: " + gallery[4].price;
+
+
+$(document).ready(function(){
+  		$("#myImg1").click(function(){
+  			$('#outer1').replaceWith(first_div);
+  		});
+  		setTimeout(function() {
+  			var div1 = document.createElement("div");
+		$(div1).css("background-image", "url(watch.jpg)").css("background-size", "contain").css("background-repeat", "no-repeat").css("float", "left");
+  			$(first_div).replaceWith(div1);
+
+}, 5000);
+	});
+
+
+
+
+$(document).ready(function(){
+  		$("#myImg2").click(function(){
+  			$('#outer2').replaceWith(second_div);
+  		});
+  		setTimeout(function() {
+  			var div2 = document.createElement("div");
+		$(div2).css("background-image", "url(necklace.jpg)").css("background-size", "contain").css("background-repeat", "no-repeat").css("float", "left");
+  			$(second_div).replaceWith(div2);
+    // $(div).fadeOut('fast');
+}, 5000);	
+
+	});
+
+
+
+
+
+$(document).ready(function(){
+  		$("#myImg3").click(function(){
+  			$('#outer3').replaceWith(third_div);
+  		});
+  		setTimeout(function() {
+  			var div3 = document.createElement("div");
+		$(div3).css("background-image", "url(airpods2.jpg)").css("background-size", "contain").css("background-repeat", "no-repeat").css("float", "left");
+  			$(third_div).replaceWith(div3);
+    // $(div).fadeOut('fast');
+}, 5000);	
+
+	});
+
+
+
+
+$(document).ready(function(){
+  		$("#myImg4").click(function(){
+  			$('#outer4').replaceWith(fourth_div);
+  		});
+  		setTimeout(function() {
+  			var div4 = document.createElement("div");
+		$(div4).css("background-image", "url(note.jpg)").css("background-size", "contain").css("background-repeat", "no-repeat").css("float", "left");
+  			$(fourth_div).replaceWith(div4);
+    // $(div).fadeOut('fast');
+}, 5000);	
+
+	});
+
+
+
+
+
+$(document).ready(function(){
+  		$("#myImg5").click(function(){
+  			$('#outer5').replaceWith(fifth_div);
+  		});
+  		setTimeout(function() {
+  			var div5 = document.createElement("div");
+		$(div5).css("background-image", "url(iphone.jpg)").css("background-size", "contain").css("background-repeat", "no-repeat").css("float", "left");
+  			$(fifth_div).replaceWith(div5);
+    // $(div).fadeOut('fast');
+}, 5000);	
+
+	});
+
+
+	$(document).ready(function(){
+  		$("#myImg1").hover(function(){
+    		$("#demo").css("background-image", "url(watch.jpg)").css("background-size", "contain").css("background-repeat", "no-repeat");
+  		});
+	});
+
+	$(document).ready(function(){
+  		$("#myImg2").hover(function(){
+    		$("#demo").css("background-image", "url(necklace.jpg)").css("background-size", "contain").css("background-repeat", "no-repeat");
+  		});
+	});
+
+	$(document).ready(function(){
+  		$("#myImg3").hover(function(){
+    		$("#demo").css("background-image", "url(airpods2.jpg)").css("background-size", "contain").css("background-repeat", "no-repeat");
+  		});
+	});
+
+	$(document).ready(function(){
+  		$("#myImg4").hover(function(){
+    		$("#demo").css("background-image", "url(note.jpg)").css("background-size", "contain").css("background-repeat", "no-repeat");
+  		});
+	});
+
+	$(document).ready(function(){
+  		$("#myImg5").hover(function(){
+    		$("#demo").css("background-image", "url(iphone.jpg)").css("background-size", "contain").css("background-repeat", "no-repeat");
+  		});
+	});
+
+</script>
+
+	<style>
+		body {
+			background-color: #ffffff;
+		}
+
+		div {
+			float: left;
+			width: 19.7%;
+			height: 300px; 
+		}
+
+		#demo {
+			height: 500px;
+			width: 50%;
+			margin: 0 auto;
+		}
+		
+		img {
+			 height: 100%;
+			 width: 100%;
+		}
+
+	</style>
+	<title>My Art Gallery</title>
+</head>
+<body>
+	<div id="main" style = "overflow: hidden; position: relative; width: 100%;">
+		<div id="outer1"><img id="myImg1" src="watch.jpg"></div>
+		<div id="outer2"><img id="myImg2" src="necklace.jpg"></div>
+		<div id="outer3"><img id="myImg3" src="airpods2.jpg"></div>
+		<div id="outer4"><img id="myImg4" src="note.jpg"></div>
+		<div id="outer5"><img id="myImg5" src="iphone.jpg"></div>
+	</div>
+
+	<div id="demo">
+			
+	</div>
+
+
+</body>
+</html>
+
