@@ -18,7 +18,7 @@ xhttp.onreadystatechange = function() {
 	    for (var i = 0; i < songs.length; i++) {
 		result += '<li>' + songs[i].title + '</li>';    
 	    }
-	    document.getElementById('people').innerHTML = result;
+	    document.getElementById('songs').innerHTML = result;
     }
 };
 xhttp.open("GET", "https://oekech01.github.io/demo/songs.json", true);
