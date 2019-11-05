@@ -5,18 +5,20 @@
 </head>
 <body>
 	<ul id="songs"></ul> 
-
-
-
-
-
+	
 	<script>
 		var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        var response = JSON.parse(xhttp.responseText);
+	var songs = response.songs;
        //document.getElementById("demo").innerHTML = xhttp.responseText;
-       console.log(response.songs);
+       //console.log(response.songs);
+	    var result = "";
+	    for (var i = 0; i < songs.length; i++) {
+		result += '<li>' + songs[i].genre + '<li>';    
+	    }
+	    document.getElementById('people').innerHTML = result;
     }
 };
 xhttp.open("GET", "https://oekech01.github.io/demo/songs.json", true);
