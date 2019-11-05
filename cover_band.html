@@ -16,7 +16,7 @@ xhttp.onreadystatechange = function() {
        //console.log(response.songs);
 	    var result = "";
 	    for (var i = 0; i < songs.length; i++) {
-		result += '<li>' + songs[i].title + '<li>';    
+		result += '<li>' + songs[i].title + '</li>';    
 	    }
 	    document.getElementById('people').innerHTML = result;
     }
