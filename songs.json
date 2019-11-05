@@ -1,0 +1,119 @@
+{
+    "songs": [
+        {
+            "title": "Juxe Box Hero",
+            "artists": [
+            "Mick Jones",
+            "Ian McDonald",
+            "Lou Graham"
+            ],
+            "genre": "rock",
+            "year": 1981
+        },
+        {
+            "title": "IDOL",
+            "artists": [
+            "RM",
+            "Jin",
+            "Suga",
+            "J-Hope",
+            "Jimin",
+            "V",
+            "Jungkook"
+            ],
+            "genre": "k-pop",
+            "year": 2018
+        },
+        {
+            "title": "Act Naturally",
+            "artists": [
+            "Ringo Starr",
+            "Paul McCartney",
+            "John Lennon",
+            "George Harrison"
+            ],
+            "genre": "country rock",
+            "year": 1965
+        },
+        {
+            "title": "Stir way to heaven",
+            "artists": [
+            "Robert Plant",
+            "Jimmy Page",
+            "John Paul Jones",
+            "John Bonham"
+            ],
+            "genre": "hard rock",
+            "year": 1971
+        },
+        {
+            "title": "What makes you beautiful",
+            "artists": [
+            "Nial Horan",
+            "Liam Payne",
+            "Harry Styles",
+            "Louis Tomlinson",
+            "Zayn Malik"
+            ],
+            "genre": "pop",
+            "year": 2011
+        },
+        {
+            "title": "Larger Than Life",
+            "artists": [
+            "AJ McLean",
+            "Nick Carter",
+            "Kevin Richardson",
+            "Brian Littrell",
+            "Howie Dorough"
+            ],
+            "genre": "pop rock",
+            "year": 1999
+        },
+        {
+            "title": "Gimme Shelter",
+            "artists": [
+            "Brian Stones",
+            "Ian Stewart",
+            "Mick Jagger",
+            "Keith Richards",
+            "Bill Wyman",
+            "Charlie Watts"
+            ],
+            "genre": "classic rock",
+            "year": 1969
+        },{
+            "title": "Nothing Else Matters",
+            "artists": [
+            "James Hetfield",
+            "Kars Ulriech",
+            "Kirk Hammett",
+            "Dave Mustaine"
+            ],
+            "genre": "rock",
+            "year": 1991
+        },
+        {
+            "title": "Yellow Submarine",
+            "artists": [
+            "Ringo Starr",
+            "Paul McCartney",
+            "John Lennon",
+            "George Harrison"
+            ],
+            "genre": "rock",
+            "year": 1966
+        },
+        {
+            "title": "Another Brick in the Wall",
+            "artists": [
+            "David Gilmour",
+            "Roger Waters",
+            "Richard Wright",
+            "Nick Mason"
+            ],
+            "genre": "classic rock",
+            "year": 1979
+        }
+    ]
+}
