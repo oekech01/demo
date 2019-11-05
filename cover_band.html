@@ -16,7 +16,7 @@ xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
        var response = JSON.parse(xhttp.responseText);
        //document.getElementById("demo").innerHTML = xhttp.responseText;
-       console.log(xhttp.responseText);
+       console.log(xhttp.songs);
     }
 };
 xhttp.open("GET", "https://oekech01.github.io/demo/my_songs.json", true);
