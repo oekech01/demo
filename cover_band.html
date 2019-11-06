@@ -5,8 +5,22 @@
 </head>
 <body>
 	<ul id="songs"></ul> 
+	<select>
+		<option value="jbh">Juxe Box Hero</option>
+		<option value="idol">IDOL</option>
+		<option value="ac">Act Naturally</option>
+		<option value="swth">Stir way to heaven</option>
+		<option value="wmyb">What makes you beautiful</option>
+		<option value="ltl">Larger Than Life</option>
+		<option value="gs">Gimme Shelter</option>
+		<option value="nem">Nothing Else Matters</option>
+		<option value="yb">Yellow Submarine</option>
+		<option value="abiw">Another Brick in the Wall</option>
+
+	</select>
 	
 	<script>
+		var list = new Array();
 		var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -16,7 +30,9 @@ xhttp.onreadystatechange = function() {
        //console.log(response.songs);
 	    var result = "";
 	    for (var i = 0; i < songs.length; i++) {
-		result += '<li>' + songs[i].title + '</li>';    
+		result += '<li>' + songs[i].title + '</li>'; 
+		list.push(songs[i].genre);
+		list.push(songs[i].title);
 	    }
 	    document.getElementById('songs').innerHTML = result;
     }
