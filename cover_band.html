@@ -17,7 +17,7 @@
 		<option value="nem">rock</option>
 		<option value="yb">classic rock</option>
 		</select></br>
-	<button onclick="myFunc()">Songs</button>
+	<button id="button">Songs</button>
 	
 	</form>
 	
@@ -42,19 +42,16 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "https://oekech01.github.io/demo/songs.json", true);
 xhttp.send();
 		
-		function myFunc() {
-		var user_select = document.getElementById("song_list");
+		document.getElementById("button").addEventListener("click", function(){
+  var user_select = document.getElementById("song_list");
 			for (var j = 0; j < list.length; j+2) {
 				if (list[j] == user_select) {
 					document.write(list[j+1]);
 				}
 			}
 		}
-		
+});
 	</script>
 
 </body>
-<!-- 	<script> 
-		
-	</script> -->
 </html>
