@@ -32,7 +32,7 @@
             "John Lennon",
             "George Harrison"
             ],
-            "genre": "country rock",
+            "genre": "country-rock",
             "year": 1965
         },
         {
@@ -43,7 +43,7 @@
             "John Paul Jones",
             "John Bonham"
             ],
-            "genre": "hard rock",
+            "genre": "hard-rock",
             "year": 1971
         },
         {
@@ -67,7 +67,7 @@
             "Brian Littrell",
             "Howie Dorough"
             ],
-            "genre": "pop rock",
+            "genre": "pop-rock",
             "year": 1999
         },
         {
@@ -80,7 +80,7 @@
             "Bill Wyman",
             "Charlie Watts"
             ],
-            "genre": "classic rock",
+            "genre": "classic-rock",
             "year": 1969
         },{
             "title": "Nothing Else Matters",
@@ -112,7 +112,7 @@
             "Richard Wright",
             "Nick Mason"
             ],
-            "genre": "classic rock",
+            "genre": "classic-rock",
             "year": 1979
         }
     ]
