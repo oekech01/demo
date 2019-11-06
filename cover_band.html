@@ -42,8 +42,7 @@ xhttp.onreadystatechange = function() {
 xhttp.open("GET", "https://oekech01.github.io/demo/songs.json", true);
 xhttp.send();
 		
-		  var user_select = document.getElementById("song_list").value;
-		
+		var user_select = document.getElementById("song_list").innerHTML;
 		
 		
 		document.getElementById("button").addEventListener("click", function(){
@@ -54,6 +53,8 @@ xhttp.send();
 				}
 			}
 		}
+								   
+								
 			//document.write("The size of list is: " + list.length + " and " + user_select);
 });
 		
