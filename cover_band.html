@@ -15,14 +15,11 @@
 		<option value="pop-rock">pop-rock</option>
 		<option value="classic-rock">classic-rock</option>
 		</select></br>
-	<button id="button">Songs</button>
+	<button id="button" onclick="myFunc()">Songs</button>
 	
 	</form>
 	
 	<script>
-		
-		
-		
 		
 		var list = new Array();
 		var xhttp = new XMLHttpRequest();
@@ -62,4 +59,47 @@ xhttp.send();
 	</script>
 
 </body>
+<script>
+	var list = new Array();
+		var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       var response = JSON.parse(xhttp.responseText);
+	var songs = response.songs;
+	    var result = "";
+	    for (var i = 0; i < songs.length; i++) {
+		result += '<li>' + songs[i].title + '</li>'; 
+		list.push(songs[i].genre);
+		list.push(songs[i].title);
+	    }
+	    document.getElementById('songs').innerHTML = result;
+    }
+};
+xhttp.open("GET", "https://oekech01.github.io/demo/songs.json", true);
+xhttp.send();
+	
+	
+	
+	$(document).ready(function(){
+    $('#song_list').on('ready',function(){
+        //var optionValue = $(this).val();
+        //var optionText = $('#dropdownList option[value="'+optionValue+'"]').text();
+        var optionText = $("#song_list option:selected").text();
+        alert("Selected Option Text: "+optionText);
+    });
+});
+	
+	
+	function myFunc() {
+		document.write("text here is: " + optionText);
+		
+// 		for (var j = 0; j < list.length; j+2) {
+// 				if (list[j] == user_select) {
+// 					document.write(list[j+1]);
+// 				}
+// 			}
+		
+		
+	}
+</script>
 </html>
