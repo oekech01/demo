@@ -5,19 +5,21 @@
 </head>
 <body>
 	<ul id="songs"></ul> 
-	<select>
-		<option value="jbh">Juxe Box Hero</option>
-		<option value="idol">IDOL</option>
-		<option value="ac">Act Naturally</option>
-		<option value="swth">Stir way to heaven</option>
-		<option value="wmyb">What makes you beautiful</option>
-		<option value="ltl">Larger Than Life</option>
-		<option value="gs">Gimme Shelter</option>
-		<option value="nem">Nothing Else Matters</option>
-		<option value="yb">Yellow Submarine</option>
-		<option value="abiw">Another Brick in the Wall</option>
-
+	<form>
+	<select id="song_list">
+		<option value="jbh">rock</option>
+		<option value="idol">k-pop</option>
+		<option value="ac">country rock</option>
+		<option value="swth">hard rock</option>
+		<option value="wmyb">pop</option>
+		<option value="ltl">pop rock</option>
+		<option value="gs">classic rock</option>
+		<option value="nem">rock</option>
+		<option value="yb">classic rock</option>
 	</select>
+	<button onclick="myFunc()">Songs</button>
+	
+	</form>
 	
 	<script>
 		var list = new Array();
@@ -39,6 +41,13 @@ xhttp.onreadystatechange = function() {
 };
 xhttp.open("GET", "https://oekech01.github.io/demo/songs.json", true);
 xhttp.send();
+		function myFunc() {
+		var user_select = document.getElementById("song_list");
+		for (var j = 0; j < list.length; j+2) {
+			if (list[j] == user_select) {
+				document.write(list[j+1]);
+			    }
+		}
 	</script>
 
 </body>
