@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test API</title>
+</head>
+<body>
+	<ul id="movie"></ul> 
+
+	<script>
+		var xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+      		var response = JSON.parse(xhttp.responseText);
+			var name = response.Title;
+			var year = respons.Year;
+			var plot = response.Plot;
+	    var result = "";
+		result += '<li>' + name + '</li>'; 
+		result += '<li>' + year + '</li>'; 
+		result += '<li>' + plot + '</li>'; 
+	    document.getElementById('movie').innerHTML = result;
+    }
+};
+xhttp.open("GET", "http://www.omdbapi.com/?apikey=7f2cd321&t=lego", true);
+xhttp.send();	
+		
+	</script>
+
+</body>
+</html>
