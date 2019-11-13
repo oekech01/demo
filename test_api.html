@@ -2,9 +2,35 @@
 <html>
 <head>
 	<title>Test API</title>
+	<style>
+		body {
+			background-color: #F2EDE7;
+			color: #061F2C;
+		}
+	</style>
 </head>
 <body>
 	<ul id="movie"></ul> 
+	<div> 
+		<p>I selected a movie database API(omdbapi.com) which gives me access to their full movie library and
+		   descriptions such as the actors, director, plot. </br></br>
+		</p>
+
+		<p>
+		   I found this api at the list of public api's given to us 
+		   <a href="https://www.diycode.cc/projects/toddmotto/public-apis"> api list</a>, 
+			specifically from <a href="https://www.omdbapi.com/">omdb</a></br></br> 
+		</p>
+
+		<p>I used an xmlhttprequest object. With "GET", I was able to access their database (without compromising it), in JSON format, and 
+		   seamlessly incorporate it in document.
+		</br></br> 
+		</p>
+
+		<p>This would be helpful for a movie rating site such as IMDB and a movie streaming site such as netflix 
+		</p>
+
+	</div>
 
 	<script>
 		var xhttp = new XMLHttpRequest();
